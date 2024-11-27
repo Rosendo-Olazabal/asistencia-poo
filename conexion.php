@@ -12,5 +12,3 @@ $conexion = mysqli_connect($host, $username, $password, $database);
 if (!$conexion) {
     die("Error en la conexión: " . mysqli_connect_error());
 }
-//echo "Conexión exitosa"; // Puedes descomentar esta línea para comprobar la conexión.
-?>
