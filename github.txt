@@ -1,0 +1,90 @@
+clonar un repositorio
+git clone URL
+
+
+Muestra el estado de los archivos en el repositorio.
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+
+Para crear una rama
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git branch Almendra
+
+cambiar de una ram a otra
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git checkout Almendra
+Switched to branch 'Almendra'
+
+
+Añade cambios al área de preparación (staging).
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (Almendra)
+$ git add .
+
+
+Guarda los cambios con un mensaje.
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (Almendra)
+$ git commit -m "Cambiando desde la rama Almendra"
+[Almendra bef1ca1] Cambiando desde la rama Almendra
+ 1 file changed, 2 deletions(-)
+
+
+Envía los cambios al repositorio remoto.
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (Almendra)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+para cambiar de rama a la principal
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (Almendra)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+
+descarga cambios del repositorio remoto.
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git pull
+From https://github.com/Rosendo-Olazabal/asistencia-poo-300
+ * [new branch]      Almendra   -> origin/Almendra
+Already up to date.
+
+une ramas
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git merge Almendra
+Updating 7086398..bef1ca1
+Fast-forward
+ conexion.php | 2 --
+ 1 file changed, 2 deletions(-)
+
+Añade y  guarda cambios al área de preparación (staging).
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git add .
+
+
+Guarda los cambios con un mensaje.
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git commit -m "Cambiando desde la rama Almendra"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+Envía los cambios al repositorio remoto.
+Alumno@PC08 MINGW64 /d/xampp/htdocs/asistencia-poo-300 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Rosendo-Olazabal/asistencia-poo-300.git
+   7086398..bef1ca1  main -> main
